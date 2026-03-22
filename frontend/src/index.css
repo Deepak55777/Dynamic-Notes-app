@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@layer {
+  body {
+    @apply bg-main text-white box-border;
+  }
+}
+
+@theme {
+  --color-card-auth: #11161f;
+  --color-main: #070b14;
+}
