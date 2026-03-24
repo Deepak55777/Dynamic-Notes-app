@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react'
+import Sidebar from '../components/Sidebar'
+import RightPanel from '../components/RightPanel'
 
 const Dashboard = () => {
 
@@ -9,7 +11,10 @@ const Dashboard = () => {
     // })
 
     return (
-        <div>Dashboard</div>
+        <div className='w-screen h-dvh flex'>
+            <Sidebar className={'w-fit sm:w-[20%] h-full'} />
+            <RightPanel className={'w-full sm:w-[80%] h-full'} />
+        </div>
     )
 }
 

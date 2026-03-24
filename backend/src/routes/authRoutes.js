@@ -2,7 +2,7 @@ import express from 'express';
 import * as z from 'zod'
 import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
-import { UserModel } from '../models/userModel.js';
+import UserModel from '../models/userModel.js';
 
 
 const authRouter = express.Router()
@@ -99,7 +99,7 @@ authRouter.post('/signin', async (req, res) => {
         }
 
         if (process.env.JWT_SECRET) {
-            const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET)
+            const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET)
 
             res.status(200).json({
                 message: "Signup successfully",

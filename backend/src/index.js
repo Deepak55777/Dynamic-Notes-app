@@ -2,7 +2,8 @@ import express from 'express';
 import cors from 'cors';
 import 'dotenv/config';
 import dbConnect from './config/dbConnection.js';
-import authRouter from './routes/authRouter.js';
+import authRouter from './routes/authRoutes.js';
+import contentRouter from './routes/contentRoutes.js'
 
 const app = express();
 
@@ -14,6 +15,7 @@ await dbConnect()
 
 //routes
 app.use('/auth', authRouter)
+app.use('/api', contentRouter)
 
 
 app.listen(process.env.PORT, () => {

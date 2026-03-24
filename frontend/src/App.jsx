@@ -15,13 +15,14 @@ const App = () => {
       <Routes>
         <Route element={<MainLayout />}>
           <Route index element={<HomePage />} />
-          <Route path='/dashboard' element={<Dashboard />} />
         </Route>
 
         <Route element={<AuthLayout />}>
           <Route path='/signup' element={<Signup />} />
           <Route path='/signin' element={<Signin />} />
         </Route>
+
+        <Route path='/dashboard' element={<Dashboard />} />
       </Routes>
     </>
   )
