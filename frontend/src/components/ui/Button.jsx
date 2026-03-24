@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Button = (props) => {
+const Button = ({frontIcon, variant, size, text, handleClick}) => {
 
     const variantStyle = {
         "primary": "bg-indigo-600 hover:bg-indigo-500 text-white",
@@ -17,8 +17,8 @@ const Button = (props) => {
 
     return (
         <>
-            <button onClick={props.handleClick} className={`${variantStyle[props.variant]} ${sizeVariant[props.size]} ${defaultStyle}`}>
-                <span className='pr-2'>{props.frontIcon}</span>  {props.text}
+            <button onClick={handleClick} className={`${variantStyle[variant]} ${sizeVariant[size]} ${defaultStyle}`}>
+                <span className='pr-2'>{frontIcon}</span>  {text}
             </button>
         </>
     )

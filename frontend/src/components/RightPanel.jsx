@@ -6,6 +6,8 @@ import axios from 'axios'
 import { toast } from 'react-toastify'
 import { useNavigate } from 'react-router'
 import Button from './ui/Button'
+import PlusIcon from '../icnons/PlusIcon'
+import ShareIcon from '../icnons/ShareIcon'
 
 const RightPanel = ({ className }) => {
 
@@ -101,8 +103,8 @@ const RightPanel = ({ className }) => {
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-10 w-full gap-4">
                 <h1 className="text-3xl font-bold text-gray-100">All Notes</h1>
                 <div className="flex gap-4">
-                    <Button frontIcon={<FiShare2 size={16} />} variant="secondary" text='Share' size="sm" handleClick={() => { }} />
-                    <Button frontIcon={<FiPlus size={20} />} variant="primary" text='Create Content' size="sm" handleClick={() => { }} />
+                    <Button frontIcon={<ShareIcon className='size-5' />} variant="secondary" text='Share' size="sm" handleClick={() => { }} />
+                    <Button frontIcon={<PlusIcon className='size-6' />} variant="primary" text='Create Content' size="sm" handleClick={() => { }} />
                 </div>
             </div>
 
