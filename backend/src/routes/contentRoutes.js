@@ -39,7 +39,6 @@ contentRouter.get('/content', userMiddleware, async (req, res) => {
         const userId = req.userId
 
         const content = await ContentModel.find({ userId }).populate("userId", "username")
-        console.log(content)
 
         if (content.length === 0) {
             return res.status(404).json({

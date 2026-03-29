@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Button = ({frontIcon, variant, size, text, handleClick}) => {
+const Button = ({ frontIcon, variant, size, text, handleClick }) => {
 
     const variantStyle = {
         "primary": "bg-indigo-600 hover:bg-indigo-500 text-white",
@@ -13,7 +13,7 @@ const Button = ({frontIcon, variant, size, text, handleClick}) => {
         "lg": 'py-6 px-10'
     }
 
-    const defaultStyle = 'rounded-xl flex items-center transition-all duration-300'
+    const defaultStyle = 'rounded-xl flex items-center transition-all duration-300 cursor-pointer'
 
     return (
         <>

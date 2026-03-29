@@ -4,7 +4,7 @@ import Form from '../../components/Forms'
 import { toast } from 'react-toastify'
 import axios from 'axios'
 
-const Signin = () => {
+const Signin = ({ setIsAuthenticated }) => {
 
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -26,6 +26,7 @@ const Signin = () => {
 
       if (data) {
         localStorage.setItem('token', data.token)
+        setIsAuthenticated(data.token)
         navigate('/dashboard')
         toast.success(data.message)
       }
